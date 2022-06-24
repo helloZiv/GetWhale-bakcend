@@ -10,13 +10,14 @@ import java.util.Optional;
 /**
  * @author ziv
  * @date 2022-06-23 3:22 下午
- * @description
+ * @description 地址的轉帳資料撈取
  */
 @Service
 public class GetTransferWhaleDataService {
     @Autowired
     private TransferDetailDao transferDetailDao;
 
+    //    資料太多，會撈很久
     public Iterable<TransferDetail> getAllRowData() {
         return transferDetailDao.findAll();
     }
